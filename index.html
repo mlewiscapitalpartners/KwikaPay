@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="KwikaPay — Move Money. Simpler. Cross-border payment solutions for individuals and businesses connected to Africa.">
+<meta name="theme-color" content="#087443">
+
+<title>KwikaPay | Move Money. Simpler.</title>
+
+<style>
+:root{
+  --green:#087443;
+  --green-dark:#045331;
+  --green-light:#e9f7f0;
+  --red:#d92d3a;
+  --red-dark:#b51f2b;
+  --navy:#082b3a;
+  --ink:#102a34;
+  --muted:#60717a;
+  --white:#fff;
+  --off:#f6faf8;
+  --line:#dce9e3;
+  --gold:#d9a441;
+  --shadow:0 18px 50px rgba(8,43,58,.10);
+  --radius:20px;
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
+  "Segoe UI",sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+  background:var(--navy);
+  color:#dfecef;
+  font-size:13px;
+}
+
+.topbar .container{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.topbar a{
+  color:#fff;
+  font-weight:700;
+}
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:900;
+  font-size:25px;
+  letter-spacing:-1px;
+  color:var(--navy);
+}
+
+.logo-mark{
+  width:39px;
+  height:39px;
+  border-radius:12px;
+  background:var(--green);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:950;
+  position:relative;
+  overflow:hidden;
+}
+
+.logo-mark:after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:5px;
+  background:var(--red);
+  right:-2px;
+  bottom:8px;
+  transform:rotate(-28deg);
+  border-radius:10px;
+}
+
+.logo span{
+  color:var(--green);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-weight:700;
+  font-size:14px;
+  color:#40545d;
+}
+
+.nav-links a:hover{
+  color:var(--green);
+}
+
+.nav-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 20px;
+  border-radius:11px;
+  border:1px solid transparent;
+  font-weight:800;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--green);
+  color:#fff;
+  box-shadow:0 8px 20px rgba(8,116,67,.20);
+}
+
+.btn-primary:hover{
+  background:var(--green-dark);
+}
+
+.btn-red{
+  background:var(--red);
+  color:#fff;
+}
+
+.btn-red:hover{
+  background:var(--red-dark);
+}
+
+.btn-outline{
+  border-color:#b9ccc5;
+  background:#fff;
+  color:var(--navy);
+}
+
+.btn-outline:hover{
+  border-color:var(--green);
+  color:var(--green);
+}
+
+.mobile-toggle{
+  display:none;
+  border:0;
+  background:none;
+  font-size:27px;
+  color:var(--navy);
+}
+
+/* HERO */
+
+.hero{
+  background:
+  radial-gradient(circle at 82% 18%,rgba(217,164,65,.16),transparent 24%),
+  radial-gradient(circle at 15% 85%,rgba(8,116,67,.13),transparent 28%),
+  linear-gradient(135deg,#f7fbf9 0%,#fff 55%,#edf8f3 100%);
+  padding:82px 0 55px;
+  overflow:hidden;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--green-light);
+  color:var(--green-dark);
+  padding:7px 12px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.eyebrow i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--red);
+}
+
+h1{
+  font-size:clamp(45px,6vw,76px);
+  line-height:.98;
+  letter-spacing:-.055em;
+  margin:18px 0 22px;
+  color:var(--navy);
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--green);
+}
+
+.hero p{
+  font-size:19px;
+  color:#53666e;
+  max-width:650px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:28px 0 25px;
+}
+
+.hero-note{
+  font-size:12px!important;
+  color:#718189!important;
+}
+
+/* HERO PAYMENT CARD */
+
+.hero-card{
+  background:var(--navy);
+  border-radius:28px;
+  padding:24px;
+  color:#fff;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.hero-card:before{
+  content:"";
+  position:absolute;
+  inset:-12px 20px auto auto;
+  width:100px;
+  height:100px;
+  background:var(--red);
+  filter:blur(50px);
+  opacity:.28;
+}
+
+.card-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.card-head strong{
+  font-size:17px;
+}
+
+.status{
+  font-size:11px;
+  background:#174b4b;
+  color:#bdf1d6;
+  padding:6px 9px;
+  border-radius:20px;
+  font-weight:800;
+}
+
+.route{
+  background:#123947;
+  border:1px solid #285261;
+  border-radius:17px;
+  padding:16px;
+}
+
+.route-line{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.flag{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff;
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-weight:900;
+}
+
+.route-line b{
+  display:block;
+}
+
+.route-line small{
+  color:#a9bdc4;
+}
+
+.route-arrow{
+  margin:10px 0 10px 17px;
+  width:2px;
+  height:25px;
+  background:linear-gradient(var(--green),var(--red));
+}
+
+.amount{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  padding:20px 2px 7px;
+}
+
+.amount span{
+  color:#a9bdc4;
+  font-size:12px;
+}
+
+.amount strong{
+  font-size:30px;
+}
+
+.card-action{
+  width:100%;
+  margin-top:14px;
+  background:#fff;
+  color:var(--navy);
+}
+
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:12px;
+}
+
+.mini{
+  background:#fff;
+  color:var(--navy);
+  padding:10px;
+  border-radius:12px;
+  font-size:11px;
+  text-align:center;
+  font-weight:800;
+}
+
+/* USE CASES */
+
+.usecases{
+  padding:80px 0;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:32px;
+}
+
+.kicker{
+  color:var(--red);
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+h2{
+  font-size:clamp(30px,4vw,47px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+  color:var(--navy);
+  margin-top:7px;
+}
+
+.section-head p{
+  max-width:440px;
+  color:var(--muted);
+}
+
+.use-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.use-card{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  transition:.2s;
+  position:relative;
+  overflow:hidden;
+}
+
+.use-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  border-color:#b9d7c9;
+}
+
+.icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:var(--green-light);
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:19px;
+}
+
+.use-card:nth-child(2) .icon,
+.use-card:nth-child(5) .icon{
+  background:#fff0f1;
+  color:var(--red);
+}
+
+.use-card h3{
+  font-size:19px;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.use-card p{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.text-link{
+  color:var(--green);
+  font-weight:900;
+  font-size:13px;
+  border:0;
+  background:none;
+  cursor:pointer;
+}
+
+/* BENEFIT BAND */
+
+.band{
+  background:var(--green);
+  color:#fff;
+  padding:20px 0;
+}
+
+.band-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.band-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:14px;
+}
+
+.band-item span{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(255,255,255,.14);
+  display:grid;
+  place-items:center;
+}
+
+/* HOW IT WORKS */
+
+.how{
+  padding:86px 0;
+  background:var(--off);
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  margin-top:40px;
+}
+
+.step{
+  position:relative;
+  padding:0 20px;
+  text-align:center;
+}
+
+.step:not(:last-child):after{
+  content:"";
+  position:absolute;
+  top:23px;
+  right:-1px;
+  width:50%;
+  height:1px;
+  background:#bfd5cc;
+}
+
+.step:not(:last-child):before{
+  content:"";
+  position:absolute;
+  top:23px;
+  left:50%;
+  width:50%;
+  height:1px;
+  background:#bfd5cc;
+}
+
+.step-num{
+  position:relative;
+  z-index:2;
+  margin:auto;
+  width:47px;
+  height:47px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--green);
+  display:grid;
+  place-items:center;
+  color:var(--green);
+  font-weight:900;
+}
+
+.step h3{
+  font-size:16px;
+  margin:17px 0 6px;
+  color:var(--navy);
+}
+
+.step p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* BUSINESS */
+
+.business{
+  padding:90px 0;
+}
+
+.business-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.business-panel{
+  background:var(--navy);
+  border-radius:27px;
+  padding:36px;
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+.business-panel .kicker{
+  color:#f0b951;
+}
+
+.business-panel h2{
+  color:#fff;
+}
+
+.business-panel p{
+  color:#bdd0d6;
+  margin:18px 0 25px;
+}
+
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.check{
+  display:flex;
+  gap:9px;
+  align-items:center;
+  font-size:13px;
+  color:#e7f1f3;
+}
+
+.check b{
+  width:21px;
+  height:21px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--green);
+  font-size:12px;
+}
+
+.biz-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+.biz-card{
+  border:1px solid var(--line);
+  padding:22px;
+  border-radius:17px;
+}
+
+.biz-card h3{
+  font-size:17px;
+  margin-bottom:6px;
+  color:var(--navy);
+}
+
+.biz-card p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* TRUST */
+
+.trust{
+  background:#fff;
+  padding:82px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:55px;
+  align-items:center;
+}
+
+.trust h2{
+  margin-bottom:15px;
+}
+
+.trust-copy{
+  color:var(--muted);
+}
+
+.trust-items{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
+.trust-item{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:var(--off);
+}
+
+.trust-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:14px;
+}
+
+.trust-item span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+/* PLATFORM */
+
+.platform{
+  padding:88px 0;
+  background:linear-gradient(135deg,#f7fbf9,#fff);
+}
+
+.platform-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.feature-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:25px;
+}
+
+.feature{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:17px;
+  border-radius:14px;
+  font-weight:800;
+  font-size:13px;
+}
+
+.feature small{
+  display:block;
+  color:var(--muted);
+  font-weight:500;
+  margin-top:3px;
+}
+
+.visual{
+  border-radius:25px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  padding:23px;
+}
+
+.dashboard{
+  background:#f4f8f6;
+  border-radius:17px;
+  padding:18px;
+}
+
+.dash-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.dash-top strong{
+  color:var(--navy);
+}
+
+.pill{
+  font-size:10px;
+  background:#e2f5eb;
+  color:var(--green);
+  padding:5px 9px;
+  border-radius:20px;
+  font-weight:900;
+}
+
+.metric{
+  background:#fff;
+  border-radius:13px;
+  padding:15px;
+  margin-bottom:10px;
+}
+
+.metric small{
+  color:var(--muted);
+}
+
+.metric strong{
+  display:block;
+  font-size:23px;
+  color:var(--navy);
+}
+
+.progress{
+  height:7px;
+  background:#e1ebe6;
+  border-radius:10px;
+  margin-top:8px;
+  overflow:hidden;
+}
+
+.progress i{
+  display:block;
+  width:72%;
+  height:100%;
+  background:var(--green);
+}
+
+/* FINAL CTA */
+
+.final-cta{
+  padding:85px 0;
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.final-cta:before,
+.final-cta:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(4px);
+}
+
+.final-cta:before{
+  width:300px;
+  height:300px;
+  background:rgba(8,116,67,.35);
+  left:-120px;
+  top:-120px;
+}
+
+.final-cta:after{
+  width:220px;
+  height:220px;
+  background:rgba(217,164,65,.16);
+  right:-80px;
+  bottom:-100px;
+}
+
+.final-cta .container{
+  position:relative;
+  z-index:1;
+}
+
+.final-cta h2{
+  color:#fff;
+  font-size:clamp(34px,5vw,56px);
+}
+
+.final-cta p{
+  max-width:650px;
+  margin:15px auto 25px;
+  color:#bfd0d6;
+}
+
+.final-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:11px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#061f2a;
+  color:#a9bdc4;
+  padding:48px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:35px;
+  padding-bottom:35px;
+}
+
+footer .logo{
+  color:#fff;
+}
+
+footer .logo span{
+  color:#5bd398;
+}
+
+.footer-brand p{
+  font-size:13px;
+  max-width:300px;
+  margin-top:13px;
+}
+
+footer h4{
+  color:#fff;
+  margin-bottom:13px;
+  font-size:13px;
+}
+
+footer ul{
+  list-style:none;
+  display:grid;
+  gap:7px;
+  font-size:13px;
+}
+
+footer a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid #173845;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:11px;
+}
+
+/* MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(3,22,29,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+  padding:18px;
+}
+
+.modal.open{
+  display:flex;
+}
+
+.modal-box{
+  background:#fff;
+  width:min(560px,100%);
+  border-radius:22px;
+  padding:28px;
+  max-height:90vh;
+  overflow:auto;
+}
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:start;
+  margin-bottom:20px;
+}
+
+.modal-head h3{
+  font-size:25px;
+  color:var(--navy);
+}
+
+.close{
+  border:0;
+  background:#eef4f1;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.field{
+  display:grid;
+  gap:6px;
+  margin-bottom:13px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+label{
+  font-size:12px;
+  font-weight:800;
+  color:var(--navy);
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #cddbd6;
+  border-radius:10px;
+  padding:12px;
+  background:#fff;
+  outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 3px rgba(8,116,67,.10);
+}
+
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.form-note{
+  font-size:11px;
+  color:var(--muted);
+  margin:5px 0 15px;
+}
+
+.success{
+  display:none;
+  text-align:center;
+  padding:30px 5px;
+}
+
+.success.show{
+  display:block;
+}
+
+.success-icon{
+  font-size:42px;
+  color:var(--green);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .nav-links,
+  .nav-actions{
+    display:none;
+  }
+
+  .mobile-toggle{
+    display:block;
+  }
+
+  .nav.mobile-open .nav-links{
+    display:flex;
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav.mobile-open .nav-actions{
+    display:flex;
+    position:absolute;
+    top:270px;
+    left:20px;
+    right:20px;
+  }
+
+  .hero-grid,
+  .business-grid,
+  .trust-grid,
+  .platform-grid{
+    grid-template-columns:1fr;
+  }
+
+  .use-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .step:not(:last-child):after,
+  .step:not(:last-child):before{
+    display:none;
+  }
+
+  .step{
+    padding:0 30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .topbar .container{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .topbar .container span{
+    display:none;
+  }
+
+  .hero{
+    padding:58px 0 40px;
+  }
+
+  h1{
+    font-size:48px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .use-grid,
+  .band-grid,
+  .biz-list,
+  .trust-items,
+  .feature-list{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head p{
+    margin-top:12px;
+  }
+
+  .checks{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    display:block;
+  }
+
+  .footer-bottom div+div{
+    margin-top:8px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+  <div class="container">
+    <span>
+      Cross-border payment solutions connecting Africa to international markets.
+    </span>
+
+    <a href="#contact">
+      Business enquiries →
+    </a>
+  </div>
+</div>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+  <div class="container nav" id="nav">
+
+    <a class="logo" href="#">
+      <span class="logo-mark">K</span>
+      Kwika<span>Pay</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#solutions">Solutions</a>
+      <a href="#how">How it works</a>
+      <a href="#business">Business</a>
+      <a href="#trust">Trust</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="nav-actions">
+
+      <button class="btn btn-outline" data-modal="quote">
+        Request a Quote
+      </button>
+
+      <button class="btn btn-primary" data-modal="payment">
+        Start a Payment
+      </button>
+
+    </div>
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      aria-label="Open menu">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        <i></i>
+        Cross-border payments
+      </span>
+
+      <h1>
+        Move money.<br>
+        <em>Simpler.</em>
+      </h1>
+
+      <p>
+        Cross-border payment solutions for individuals and businesses
+        connected to Africa — designed around a simpler, more convenient
+        and efficient payment experience.
+      </p>
+
+      <div class="hero-actions">
+
+        <button
+          class="btn btn-primary"
+          data-modal="payment">
+          Start a Payment →
+        </button>
+
+        <button
+          class="btn btn-outline"
+          data-modal="quote">
+          Request a Quote
+        </button>
+
+      </div>
+
+      <p class="hero-note">
+        Payment availability, corridors, settlement options and required
+        verification depend on the transaction and applicable requirements.
+      </p>
+
+    </div>
+
+
+    <!-- PAYMENT CARD -->
+
+    <div class="hero-card">
+
+      <div class="card-head">
+
+        <strong>
+          Cross-border payment
+        </strong>
+
+        <span class="status">
+          ● Designed for visibility
+        </span>
+
+      </div>
+
+
+      <div class="route">
+
+        <div class="route-line">
+
+          <span class="flag">
+            ZM
+          </span>
+
+          <div>
+            <small>From</small>
+            <b>Zambia</b>
+          </div>
+
+        </div>
+
+
+        <div class="route-arrow"></div>
+
+
+        <div class="route-line">
+
+          <span class="flag">
+            ↗
+          </span>
+
+          <div>
+            <small>To</small>
+            <b>International market</b>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="amount">
+
+        <div>
+          <span>Payment experience</span>
+          <strong>Simple</strong>
+        </div>
+
+        <div>
+          <span>Status</span>
+          <strong>Trackable</strong>
+        </div>
+
+      </div>
+
+
+      <button
+        class="btn card-action"
+        data-modal="payment">
+        Tell us what you need to pay
+      </button>
+
+
+      <div class="mini-grid">
+
+        <div class="mini">
+          Verify
+        </div>
+
+        <div class="mini">
+          Transact
+        </div>
+
+        <div class="mini">
+          Confirm
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUE BAND -->
+
+<div class="band">
+
+  <div class="container band-grid">
+
+    <div class="band-item">
+      <span>✓</span>
+      Quick
+    </div>
+
+    <div class="band-item">
+      <span>✓</span>
+      Convenient
+    </div>
+
+    <div class="band-item">
+      <span>✓</span>
+      Efficient
+    </div>
+
+    <div class="band-item">
+      <span>✓</span>
+      Trusted
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- SOLUTIONS -->
+
+<section class="usecases" id="solutions">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="kicker">
+          Choose your need
+        </span>
+
+        <h2>
+          What are you trying to do?
+        </h2>
+
+      </div>
+
+      <p>
+        Start with the transaction you need. KwikaPay is built around
+        the real payment jobs individuals and businesses need to complete
+        across borders.
+      </p>
+
+    </div>
+
+
+    <div class="use-grid">
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ↗
+        </div>
+
+        <h3>
+          Pay a supplier abroad
+        </h3>
+
+        <p>
+          For inventory, equipment, merchandise, raw materials and other
+          eligible supplier payments.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="payment">
+          Pay a supplier →
+        </button>
+
+      </article>
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ₿
+        </div>
+
+        <h3>
+          Send money to Zambia
+        </h3>
+
+        <p>
+          Cross-border remittance options for people sending money
+          to recipients in Zambia.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="payment">
+          Send to Zambia →
+        </button>
+
+      </article>
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ⇄
+        </div>
+
+        <h3>
+          Make an international payment
+        </h3>
+
+        <p>
+          Request a convenient payment route for eligible goods,
+          services and other permitted transactions.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="payment">
+          Make a payment →
+        </button>
+
+      </article>
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ↓
+        </div>
+
+        <h3>
+          Receive international payments
+        </h3>
+
+        <p>
+          For African businesses receiving payments from customers,
+          partners and businesses across borders.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="business">
+          Receive payments →
+        </button>
+
+      </article>
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ◎
+        </div>
+
+        <h3>
+          Business collections
+        </h3>
+
+        <p>
+          Explore cross-border collections, local settlement and
+          payment acceptance for your business.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="business">
+          Discuss collections →
+        </button>
+
+      </article>
+
+
+      <article class="use-card">
+
+        <div class="icon">
+          ≋
+        </div>
+
+        <h3>
+          Bulk business payments
+        </h3>
+
+        <p>
+          Explore payment workflows designed for businesses managing
+          multiple transactions.
+        </p>
+
+        <button
+          class="text-link"
+          data-modal="business">
+          Talk to business →
+        </button>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how" id="how">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="kicker">
+          The KwikaPay experience
+        </span>
+
+        <h2>
+          From request to confirmation.
+        </h2>
+
+      </div>
+
+      <p>
+        A straightforward experience built around discovery,
+        verification, transaction visibility and appropriate confirmation.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="step-num">
+          1
+        </div>
+
+        <h3>
+          Tell us
+        </h3>
+
+        <p>
+          Choose what you need to send, pay, receive or collect.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-num">
+          2
+        </div>
+
+        <h3>
+          Verify
+        </h3>
+
+        <p>
+          Provide the required customer, beneficiary and transaction
+          information.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-num">
+          3
+        </div>
+
+        <h3>
+          Transact
+        </h3>
+
+        <p>
+          KwikaPay facilitates the transaction through applicable
+          infrastructure.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-num">
+          4
+        </div>
+
+        <h3>
+          Track
+        </h3>
+
+        <p>
+          Understand the status of your transaction through the process.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-num">
+          5
+        </div>
+
+        <h3>
+          Confirm
+        </h3>
+
+        <p>
+          Receive appropriate transaction information and confirmation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BUSINESS -->
+
+<section class="business" id="business">
+
+  <div class="container business-grid">
+
+
+    <div class="business-panel">
+
+      <span class="kicker">
+        For businesses
+      </span>
+
+      <h2>
+        Payments built around how your business moves.
+      </h2>
+
+      <p>
+        Go beyond a single transfer. Explore cross-border payments,
+        collections, settlement, reconciliation and business payment
+        infrastructure as your needs grow.
+      </p>
+
+
+      <div class="checks">
+
+        <div class="check">
+          <b>✓</b>
+          Payment tracking
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          Local settlement
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          Bulk payments
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          Reconciliation
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          Collections
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          Integrations
+        </div>
+
+      </div>
+
+      <br>
+
+      <button
+        class="btn btn-red"
+        data-modal="business">
+        Talk to KwikaPay Business →
+      </button>
+
+    </div>
+
+
+    <div>
+
+      <span class="kicker">
+        Business solutions
+      </span>
+
+      <h2>
+        Designed for growing cross-border activity.
+      </h2>
+
+
+      <div
+        class="biz-list"
+        style="margin-top:25px">
+
+
+        <div class="biz-card">
+
+          <h3>
+            Supplier payments
+          </h3>
+
+          <p>
+            Support international supplier payment workflows
+            for importing businesses.
+          </p>
+
+        </div>
+
+
+        <div class="biz-card">
+
+          <h3>
+            Cross-border collections
+          </h3>
+
+          <p>
+            Explore ways to receive payments from customers and
+            partners across markets.
+          </p>
+
+        </div>
+
+
+        <div class="biz-card">
+
+          <h3>
+            FX & settlement
+          </h3>
+
+          <p>
+            Currency conversion and local settlement can form
+            part of the payment journey.
+          </p>
+
+        </div>
+
+
+        <div class="biz-card">
+
+          <h3>
+            Payment infrastructure
+          </h3>
+
+          <p>
+            Business dashboards, integrations and APIs can support
+            broader payment operations as the platform develops.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust" id="trust">
+
+  <div class="container trust-grid">
+
+    <div>
+
+      <span class="kicker">
+        Trust matters
+      </span>
+
+      <h2>
+        Built around responsible payments.
+      </h2>
+
+      <p class="trust-copy">
+        Customers entrust KwikaPay with financial transactions.
+        The operating model is therefore designed around appropriate
+        verification, risk controls, security, transparency and
+        applicable requirements.
+      </p>
+
+    </div>
+
+
+    <div class="trust-items">
+
+      <div class="trust-item">
+        <strong>KYC & KYB</strong>
+        <span>Customer and business verification</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>AML / CTF</strong>
+        <span>Appropriate financial crime controls</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Screening</strong>
+        <span>Sanctions and transaction controls</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Fraud prevention</strong>
+        <span>Risk-aware payment processes</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Data protection</strong>
+        <span>Privacy and information security</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Transparency</strong>
+        <span>Clear pricing and terms</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section class="platform" id="about">
+
+  <div class="container platform-grid">
+
+    <div>
+
+      <span class="kicker">
+        More than a transfer
+      </span>
+
+      <h2>
+        A technology layer for cross-border commerce.
+      </h2>
+
+      <p style="color:var(--muted);margin-top:15px">
+
+        KwikaPay can progressively connect customers to appropriate
+        banks, payment institutions, mobile-money providers, FX and
+        liquidity providers, payment rails and other regulated
+        infrastructure while building a simpler customer experience.
+
+      </p>
+
+
+      <div class="feature-list">
+
+        <div class="feature">
+          Digital onboarding
+          <small>
+            Customer verification workflows
+          </small>
+        </div>
+
+        <div class="feature">
+          Payment initiation
+          <small>
+            Simple transaction requests
+          </small>
+        </div>
+
+        <div class="feature">
+          Transaction tracking
+          <small>
+            Visibility through the journey
+          </small>
+        </div>
+
+        <div class="feature">
+          Notifications
+          <small>
+            Relevant transaction updates
+          </small>
+        </div>
+
+        <div class="feature">
+          Reconciliation
+          <small>
+            Business payment records
+          </small>
+        </div>
+
+        <div class="feature">
+          APIs & integrations
+          <small>
+            Future-ready connectivity
+          </small>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="visual">
+
+      <div class="dashboard">
+
+        <div class="dash-top">
+
+          <strong>
+            Payment workspace
+          </strong>
+
+          <span class="pill">
+            Business
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <small>
+            Payment status
+          </small>
+
+          <strong>
+            In progress
+          </strong>
+
+          <div class="progress">
+            <i></i>
+          </div>
+
+        </div>
+
+
+        <div class="metric">
+
+          <small>
+            Transaction visibility
+          </small>
+
+          <strong>
+            Trackable
+          </strong>
+
+        </div>
+
+
+        <div class="metric">
+
+          <small>
+            Records
+          </small>
+
+          <strong>
+            Ready for reconciliation
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta" id="contact">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Start with your transaction
+    </span>
+
+    <h2>
+      Ready to move money?
+    </h2>
+
+    <p>
+      Tell KwikaPay what you need to pay, send, receive or collect.
+      We can assess the transaction and the applicable payment route.
+    </p>
+
+
+    <div class="final-actions">
+
+      <button
+        class="btn btn-primary"
+        data-modal="payment">
+        Start a Payment →
+      </button>
+
+      <button
+        class="btn btn-red"
+        data-modal="quote">
+        Request a Quote
+      </button>
+
+      <button
+        class="btn btn-outline"
+        data-modal="business">
+        Business Enquiry
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a class="logo" href="#">
+          <span class="logo-mark">K</span>
+          Kwika<span>Pay</span>
+        </a>
+
+        <p>
+          Cross-border payments and financial technology solutions
+          for customers connected to Sub-Saharan African markets.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Solutions
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="#solutions">
+              Supplier payments
+            </a>
+          </li>
+
+          <li>
+            <a href="#solutions">
+              International payments
+            </a>
+          </li>
+
+          <li>
+            <a href="#solutions">
+              Remittances
+            </a>
+          </li>
+
+          <li>
+            <a href="#business">
+              Business payments
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Company
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="#about">
+              About KwikaPay
+            </a>
+          </li>
+
+          <li>
+            <a href="#how">
+              How it works
+            </a>
+          </li>
+
+          <li>
+            <a href="#trust">
+              Trust & compliance
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Markets
+        </h4>
+
+        <ul>
+
+          <li>
+            Zambia
+          </li>
+
+          <li>
+            Sub-Saharan Africa
+          </li>
+
+          <li>
+            International corridors
+          </li>
+
+          <li>
+            Cross-border commerce
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div>
+        © <span id="year"></span> KwikaPay. All rights reserved.
+      </div>
+
+      <div>
+        Payment availability is subject to applicable requirements,
+        verification and supported corridors.
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+
+      <div>
+
+        <span class="kicker">
+          KwikaPay
+        </span>
+
+        <h3 id="modalTitle">
+          Start a Payment
+        </h3>
+
+      </div>
+
+      <button
+        class="close"
+        id="closeModal">
+        ×
+      </button>
+
+    </div>
+
+
+    <form id="leadForm">
+
+      <div class="form-grid">
+
+
+        <div class="field">
+
+          <label>
+            Full name
+          </label>
+
+          <input
+            required
+            name="name"
+            placeholder="Your name">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Email
+          </label>
+
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder="you@example.com">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Phone / WhatsApp
+          </label>
+
+          <input
+            name="phone"
+            placeholder="+260 ...">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Customer type
+          </label>
+
+          <select name="type">
+
+            <option>
+              Individual
+            </option>
+
+            <option>
+              SME / Business
+            </option>
+
+            <option>
+              Corporate
+            </option>
+
+            <option>
+              Diaspora
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field full">
+
+          <label>
+            What do you need?
+          </label>
+
+          <select
+            name="need"
+            id="need">
+
+            <option>
+              Pay a supplier abroad
+            </option>
+
+            <option>
+              Send money to Zambia
+            </option>
+
+            <option>
+              Make an international payment
+            </option>
+
+            <option>
+              Receive international payments
+            </option>
+
+            <option>
+              Cross-border collections
+            </option>
+
+            <option>
+              Bulk business payments
+            </option>
+
+            <option>
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field full">
+
+          <label>
+            Origin / destination
+          </label>
+
+          <input
+            name="corridor"
+            placeholder="e.g. Zambia → another country">
+
+        </div>
+
+
+        <div class="field full">
+
+          <label>
+            Tell us about the transaction
+          </label>
+
+          <textarea
+            name="message"
+            placeholder="Amount, purpose and any useful details">
+          </textarea>
+
+        </div>
+
+
+      </div>
+
+
+      <p class="form-note">
+
+        Submitting this form starts an enquiry. It does not execute
+        a payment. Transactions remain subject to verification,
+        applicable requirements, supported corridors and availability.
+
+      </p>
+
+
+      <button
+        class="btn btn-primary"
+        style="width:100%">
+        Submit enquiry →
+      </button>
+
+    </form>
+
+
+    <div
+      class="success"
+      id="success">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h3>
+        Enquiry received
+      </h3>
+
+      <p
+        style="color:var(--muted);margin:8px 0 20px">
+
+        Your request has been captured in this demo.
+        Connect the form to your backend, CRM or email endpoint
+        before deploying to production.
+
+      </p>
+
+      <button
+        class="btn btn-outline"
+        id="done">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+const nav = document.getElementById("nav");
+
+document
+  .getElementById("mobileToggle")
+  .addEventListener("click", function(){
+    nav.classList.toggle("mobile-open");
+  });
+
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(function(a){
+
+    a.addEventListener("click", function(){
+      nav.classList.remove("mobile-open");
+    });
+
+  });
+
+
+/* MODAL */
+
+const modal =
+  document.getElementById("modal");
+
+const title =
+  document.getElementById("modalTitle");
+
+const need =
+  document.getElementById("need");
+
+const leadForm =
+  document.getElementById("leadForm");
+
+const success =
+  document.getElementById("success");
+
+
+const titles = {
+  payment:"Start a Payment",
+  quote:"Request a Quote",
+  business:"Business Enquiry"
+};
+
+
+document
+  .querySelectorAll("[data-modal]")
+  .forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+      const type =
+        btn.dataset.modal;
+
+      title.textContent =
+        titles[type] || "KwikaPay Enquiry";
+
+      if(type === "business"){
+        need.value = "Other";
+      }
+
+      modal.classList.add("open");
+
+      document.body.style.overflow =
+        "hidden";
+
+    });
+
+  });
+
+
+function closeModal(){
+
+  modal.classList.remove("open");
+
+  document.body.style.overflow = "";
+
+  leadForm.style.display = "block";
+
+  success.classList.remove("show");
+
+}
+
+
+document
+  .getElementById("closeModal")
+  .onclick = closeModal;
+
+
+document
+  .getElementById("done")
+  .onclick = closeModal;
+
+
+modal.addEventListener("click",function(e){
+
+  if(e.target === modal){
+    closeModal();
+  }
+
+});
+
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key === "Escape"){
+    closeModal();
+  }
+
+});
+
+
+/* FORM DEMO */
+
+leadForm.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+  leadForm.style.display = "none";
+
+  success.classList.add("show");
+
+});
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
