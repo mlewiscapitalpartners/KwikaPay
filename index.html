@@ -131,7 +131,6 @@ p{color:var(--body)}
 .ripple{position:absolute;border-radius:50%;transform:scale(0);background:rgba(255,255,255,.5);pointer-events:none;animation:ripple .6s ease-out;z-index:-1}
 .btn-outline .ripple,.btn-ghost .ripple{background:rgba(15,123,79,.2)}
 
-/* Help trigger button */
 .help-dot{
   display:inline-grid;place-items:center;
   width:18px;height:18px;border-radius:50%;
@@ -207,7 +206,6 @@ p{color:var(--body)}
 .hero-stat .n{font-size:24px;font-weight:850;color:var(--ink);letter-spacing:-.035em;font-variant-numeric:tabular-nums;display:block}
 .hero-stat .l{font-size:12px;color:var(--muted);font-weight:600}
 
-/* Hero self-service panel */
 .self-panel{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);
   padding:26px;box-shadow:var(--shadow-lg);position:relative;
@@ -231,7 +229,6 @@ p{color:var(--body)}
 .self-body{display:none}
 .self-body.active{display:block;animation:fadeIn .3s ease}
 
-/* converter inside self panel */
 .conv-field{display:flex;align-items:center;gap:12px;padding:13px 15px;background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:var(--r-md);transition:border-color .2s,background .2s}
 .conv-field:focus-within{border-color:var(--green);background:#fff;box-shadow:0 0 0 3.5px rgba(15,123,79,.1)}
 .conv-field + .conv-field{margin-top:10px}
@@ -253,7 +250,6 @@ p{color:var(--body)}
 
 .self-cta{margin-top:14px}
 
-/* track form */
 .track-form .field{margin-bottom:12px}
 .track-result{margin-top:16px;animation:slideUp .3s var(--ease-out)}
 
@@ -267,7 +263,7 @@ p{color:var(--body)}
 .section-head h2{margin:12px 0 16px}
 
 /* ============================================================
-   SELF-SERVICE FEATURES (public)
+   SELF-SERVICE FEATURES
    ============================================================ */
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature-card{
@@ -284,7 +280,6 @@ p{color:var(--body)}
 .feature-card p{font-size:13.5px;color:var(--body);line-height:1.6}
 .feature-card .pill{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;color:var(--green-700);text-transform:uppercase;letter-spacing:.08em}
 
-/* help center */
 .help-search{
   position:relative;max-width:600px;margin:0 auto 32px;
 }
@@ -316,7 +311,6 @@ p{color:var(--body)}
 .help-card p{font-size:13px;color:var(--muted);line-height:1.55}
 .help-card .arrow{margin-top:14px;font-size:13px;color:var(--green);font-weight:800}
 
-/* status page */
 .status-hero{text-align:center;margin-bottom:40px}
 .status-badge{
   display:inline-flex;align-items:center;gap:12px;
@@ -338,7 +332,6 @@ p{color:var(--body)}
 .status-item .body small{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
 .status-item .pct{font-size:13.5px;font-weight:800;color:var(--green-700)}
 
-/* FAQ */
 .faq-list{max-width:800px;margin:0 auto}
 .faq-item{border-bottom:1px solid var(--line);padding:0}
 .faq-q{
@@ -514,12 +507,10 @@ p{color:var(--body)}
 
 .app-body{padding:28px;flex:1;min-width:0;animation:slideUp .4s var(--ease-out)}
 
-/* greeting */
 .greeting{margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .greeting h1{font-size:28px;letter-spacing:-.04em;margin-bottom:6px}
 .greeting p{font-size:14.5px;color:var(--muted)}
 
-/* quick actions */
 .quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
 .quick-action{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;text-align:left;transition:transform .3s var(--ease),border-color .25s,box-shadow .3s;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
 .quick-action::after{content:"";position:absolute;inset:0;border-radius:var(--r-lg);background:linear-gradient(135deg,rgba(15,123,79,.05),transparent 60%);opacity:0;transition:opacity .3s}
@@ -533,7 +524,6 @@ p{color:var(--body)}
 .quick-action b{font-size:14.5px;color:var(--ink);display:block}
 .quick-action small{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
 
-/* self-service banner */
 .self-banner{
   background:linear-gradient(135deg,var(--green-700),var(--green));
   color:#fff;border-radius:var(--r-lg);padding:20px 24px;margin-bottom:24px;
@@ -547,7 +537,6 @@ p{color:var(--body)}
 .self-banner .body b{display:block;font-size:15px;margin-bottom:3px}
 .self-banner .body small{font-size:13px;color:rgba(255,255,255,.85);line-height:1.5;display:block}
 
-/* dash grid */
 .dash-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:start}
 .section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
 .section-title h3{font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px}
@@ -590,7 +579,6 @@ p{color:var(--body)}
 .recipient-add .avatar{background:var(--bg-muted);color:var(--muted);font-size:20px;font-weight:400}
 .recipient-add:hover .avatar{background:var(--green);color:#fff}
 
-/* insight cards */
 .insight{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;margin-bottom:14px}
 .insight-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .insight-head .ic{width:32px;height:32px;border-radius:10px;background:var(--amber-50);color:var(--amber);display:grid;place-items:center;font-size:15px;flex:none}
@@ -598,15 +586,12 @@ p{color:var(--body)}
 .insight p{font-size:13.5px;color:var(--body);line-height:1.55;margin-bottom:12px}
 .insight .actions{display:flex;gap:8px;flex-wrap:wrap}
 
-/* empty */
 .empty{padding:56px 24px;text-align:center}
 .empty .ic{width:60px;height:60px;border-radius:18px;background:var(--green-50);color:var(--green);display:grid;place-items:center;font-size:26px;margin:0 auto 20px;animation:float 4s ease-in-out infinite}
 .empty h3{font-size:18px;margin-bottom:8px}
 .empty p{font-size:14px;color:var(--muted);max-width:38ch;margin:0 auto 20px}
 
-/* ============================================================
-   SEND FLOW
-   ============================================================ */
+/* SEND FLOW */
 .send-wrap{max-width:760px;margin:0 auto}
 .send-steps{display:flex;gap:8px;margin-bottom:28px}
 .send-step{flex:1;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--muted);transition:all .3s var(--ease)}
@@ -644,9 +629,7 @@ p{color:var(--body)}
 .quote-total .k{font-size:14px;color:var(--muted);font-weight:600}
 .quote-total .v{font-size:28px;font-weight:850;color:var(--ink);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 
-/* ============================================================
-   TRANSACTIONS
-   ============================================================ */
+/* TRANSACTIONS */
 .filter-tabs{display:flex;gap:6px;padding:5px;background:var(--bg-muted);border-radius:12px;margin-bottom:22px;overflow-x:auto;scrollbar-width:none;width:fit-content}
 .filter-tabs::-webkit-scrollbar{display:none}
 .filter-tab{padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:700;color:var(--body);white-space:nowrap;transition:all .2s var(--ease)}
@@ -669,7 +652,6 @@ p{color:var(--body)}
 .tl-item .d{font-size:13px;color:var(--muted);margin-top:3px}
 .tl-item .ts{font-size:11.5px;color:#9AACB3;margin-top:4px}
 
-/* action bar */
 .action-bar{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
   padding:20px 24px;margin-bottom:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;
@@ -677,9 +659,7 @@ p{color:var(--body)}
 .action-bar .lbl{flex:1;min-width:180px;font-size:13.5px;color:var(--body)}
 .action-bar .lbl b{color:var(--ink);display:block;margin-bottom:2px}
 
-/* ============================================================
-   WALLET
-   ============================================================ */
+/* WALLET */
 .wallet-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start}
 .balance-stack{display:grid;gap:12px}
 .currency-row{
@@ -708,9 +688,7 @@ p{color:var(--body)}
 .cv-field input:focus{outline:none;box-shadow:none}
 .cv-field select{border:0;background:var(--bg-muted);font-size:13px;font-weight:800;padding:7px 26px 7px 10px;border-radius:8px;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2.5 4.5 6 8 9.5 4.5' stroke='%237A8A94' stroke-width='1.8' fill='none' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:right 8px center}
 
-/* ============================================================
-   RECIPIENTS
-   ============================================================ */
+/* RECIPIENTS */
 .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .rec-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;display:flex;flex-direction:column;gap:14px;transition:transform .25s var(--ease),border-color .2s,box-shadow .25s}
 .rec-card:hover{transform:translateY(-3px);border-color:var(--green-100);box-shadow:var(--shadow)}
@@ -723,9 +701,7 @@ p{color:var(--body)}
 .rec-card .verified{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:var(--green-700);background:var(--green-50);padding:3px 8px;border-radius:6px;margin-top:8px}
 .rec-card .actions{display:flex;gap:8px;margin-top:auto}
 
-/* ============================================================
-   RATE ALERTS
-   ============================================================ */
+/* ALERTS */
 .alerts-list{display:grid;gap:12px}
 .alert-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .alert-card .cf{width:40px;height:40px;border-radius:50%;background:var(--bg-muted);display:grid;place-items:center;font-size:12px;font-weight:900;flex:none}
@@ -739,9 +715,7 @@ p{color:var(--body)}
 .alert-card .state.on{background:var(--green-50);color:var(--green-700)}
 .alert-card .state.off{background:var(--bg-muted);color:var(--muted)}
 
-/* ============================================================
-   HELP DRAWER (in-app)
-   ============================================================ */
+/* DRAWER */
 .drawer-scrim{position:fixed;inset:0;background:rgba(10,31,46,.5);z-index:180;display:none}
 .drawer-scrim.open{display:block;animation:fadeIn .2s}
 .drawer{
@@ -773,9 +747,7 @@ p{color:var(--body)}
 .drawer-item .body small{font-size:12px;color:var(--muted);display:block;margin-top:2px}
 .drawer-item .arw{color:var(--muted);font-size:14px}
 
-/* ============================================================
-   PROFILE
-   ============================================================ */
+/* PROFILE */
 .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
 .setting-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
 .setting-row:last-child{border-bottom:0}
@@ -787,9 +759,7 @@ p{color:var(--body)}
 .toggle.on{background:var(--green)}
 .toggle.on::after{transform:translateX(18px)}
 
-/* ============================================================
-   LIMITS
-   ============================================================ */
+/* LIMITS */
 .limit-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;margin-bottom:16px}
 .limit-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap}
 .limit-head h3{font-size:16px}
@@ -802,9 +772,7 @@ p{color:var(--body)}
 .tier-badge.silver{background:#E8EDF2;color:#4C5862}
 .tier-badge.gold{background:linear-gradient(135deg,#F7E3A7,#E5A93D);color:#5C3D08}
 
-/* ============================================================
-   MODAL / TOAST
-   ============================================================ */
+/* MODAL / TOAST */
 .modal-bg{position:fixed;inset:0;background:rgba(10,31,46,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}
 .modal-bg.open{display:flex;animation:fadeIn .2s}
 .modal{background:#fff;border-radius:var(--r-xl);width:min(560px,100%);max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-xl);animation:scaleIn .3s var(--ease-out)}
@@ -822,9 +790,7 @@ p{color:var(--body)}
 .toast.good{background:linear-gradient(135deg,var(--green-700),var(--green))}
 .toast.bad{background:linear-gradient(135deg,#8C2025,var(--red))}
 
-/* ============================================================
-   FORMS
-   ============================================================ */
+/* FORMS */
 .field{display:grid;gap:7px;margin-bottom:16px}
 .field label{font-size:13px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:6px}
 .field .hint{font-size:12px;color:var(--muted);font-weight:400}
@@ -842,9 +808,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns=
 .badge.neutral{background:var(--bg-muted);color:#5C6E78;border-color:var(--line)}
 .badge.info{background:#E6F2F7;color:#1A6A87;border-color:#C7E2EC}
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE */
 @media (max-width:1024px){
   .hero-grid{grid-template-columns:1fr;gap:56px}
   .dash-grid{grid-template-columns:1fr}
@@ -1084,6 +1048,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns=
 
 /* ================================================================
    CONFIG
+   Rates sourced from Wise / ECB mid-market — 30 September 2026
    ================================================================ */
 const CONFIG = {
   currencies:{
@@ -1097,7 +1062,19 @@ const CONFIG = {
     INR:{code:'INR',symbol:'₹',name:'Indian Rupee',flag:'IN',decimals:2},
     AED:{code:'AED',symbol:'د.إ',name:'UAE Dirham',flag:'AE',decimals:2}
   },
-  rates:{ USD:1, GBP:0.786, EUR:0.921, ZMW:27.15, ZAR:18.42, KES:129.35, NGN:1547.80, INR:83.28, AED:3.673 },
+
+  /* Mid-market rates, base USD — updated 30 Sept 2026 */
+  rates:{
+    USD:1,
+    GBP:0.7534,       /* 1 USD = 0.7534 GBP (GBP/USD 1.3273) */
+    EUR:0.8807,       /* 1 USD = 0.8807 EUR (EUR/USD 1.1355) */
+    ZMW:19.6850,      /* 1 USD = 19.6850 ZMW — Wise mid-market */
+    ZAR:16.4015,      /* 1 USD = 16.4015 ZAR */
+    KES:129.700,      /* 1 USD = 129.700 KES */
+    NGN:1365.70,      /* 1 USD = 1,365.70 NGN */
+    INR:95.9743,      /* 1 USD = 95.9743 INR */
+    AED:3.6730        /* 1 USD = 3.6730 AED */
+  },
 
   corridors:[
     {id:'GB-ZM', from:'GBP', to:'ZMW', label:'United Kingdom → Zambia', eta:'Instant', methods:['Bank transfer','Debit card']},
@@ -1115,7 +1092,6 @@ const CONFIG = {
   feeMin:2,
   spread:0.0055,
 
-  /* self-service limits per tier */
   tiers:{
     starter:  { label:'Starter',  daily:2500,  monthly:10000,  perTxn:2500 },
     verified: { label:'Verified', daily:10000, monthly:50000,  perTxn:10000 },
@@ -1351,7 +1327,6 @@ const Txns = {
   find(id){ return Store.find('transactions',t=>t.id===id); },
   byReference(ref){ return Store.find('transactions',t=>String(t.reference).toUpperCase()===String(ref).trim().toUpperCase()); },
 
-  /* self-serve: customer can cancel while still in the eligible state */
   cancel(id, reason){
     const t = Store.find('transactions',x=>x.id===id);
     if(!t) throw new Error('Payment not found.');
@@ -1365,7 +1340,6 @@ const Txns = {
     });
   },
 
-  /* self-serve: retry a failed payment */
   retry(id){
     const t = Store.find('transactions',x=>x.id===id);
     if(!t) throw new Error('Payment not found.');
@@ -1399,7 +1373,6 @@ const Txns = {
     return fresh;
   },
 
-  /* self-serve: report an issue → moves into dispute state */
   dispute(id, reason, detail){
     const t = Store.find('transactions',x=>x.id===id);
     if(!t) throw new Error('Payment not found.');
@@ -1425,7 +1398,6 @@ const Txns = {
     };
   },
 
-  /* daily volume used for limit progress */
   dailyVolume(userId){
     const since = Date.now() - 24*60*60*1000;
     return this.forUser(userId)
@@ -1467,7 +1439,7 @@ const Alerts = {
 };
 
 /* ================================================================
-   HELP CONTENT (self-service knowledge base)
+   HELP CONTENT
    ================================================================ */
 const HELP = {
   articles:[
@@ -1490,8 +1462,6 @@ const HELP = {
     { id:'dispute2', cat:'Payments',   title:'What happens after I report an issue', summary:'How the dispute process works, timelines, and where updates appear.' },
     { id:'business', cat:'Business',   title:'Business account features',        summary:'Bulk payments, reconciliation exports, API access, and more.' }
   ],
-
-  /* search */
   search(q){
     q = String(q||'').toLowerCase().trim();
     if(!q) return this.articles;
@@ -1501,12 +1471,11 @@ const HELP = {
       a.cat.toLowerCase().includes(q)
     );
   },
-
   get(id){ return this.articles.find(a => a.id === id); }
 };
 
 /* ================================================================
-   SELF-SERVICE HELP (contextual hints)
+   HINTS
    ================================================================ */
 const HINTS = {
   sendAmount:      'Enter any amount. The rate and fee update live. Your total is what you see.',
@@ -1710,7 +1679,10 @@ const Router = {
 function renderTicker(){
   const track = $('#tickerTrack');
   if(!track) return;
-  const pairs = [['GBP','ZMW'],['USD','ZMW'],['ZAR','ZMW'],['GBP','NGN'],['USD','KES'],['GBP','USD'],['EUR','USD'],['AED','INR'],['ZMW','GBP'],['USD','NGN']];
+  const pairs = [
+    ['USD','ZMW'],['GBP','ZMW'],['ZAR','ZMW'],['GBP','NGN'],['USD','KES'],
+    ['GBP','USD'],['EUR','USD'],['AED','INR'],['ZMW','GBP'],['USD','NGN']
+  ];
   const items = pairs.map(([f,t])=>{
     const r = Fx.rate(f,t);
     if(r===null) return '';
@@ -1732,12 +1704,10 @@ function renderTicker(){
    ================================================================ */
 function renderPublic(parts){
   const root = parts[0] || '';
-
   if(root === 'track'){ $('#publicMain').innerHTML = viewTrackPage(); return; }
   if(root === 'help'){ $('#publicMain').innerHTML = viewHelpPage(); return; }
   if(root === 'status'){ $('#publicMain').innerHTML = viewStatusPage(); return; }
   if(root === 'calculator'){ $('#publicMain').innerHTML = viewCalculatorPage(); return; }
-
   $('#publicMain').innerHTML = viewLanding();
 }
 
@@ -1780,7 +1750,6 @@ function viewLanding(){
             <button class="self-tab" data-action="self-tab" data-value="calc">Fees</button>
           </div>
 
-          <!-- Convert -->
           <div class="self-body active" data-body="convert">
             <div class="conv-field">
               <label>You send</label>
@@ -1803,12 +1772,11 @@ function viewLanding(){
             <button class="btn btn-primary btn-block btn-lg self-cta" data-nav="#/signup">Send this money →</button>
           </div>
 
-          <!-- Track -->
           <div class="self-body" data-body="track">
             <div class="track-form">
               <div class="field" style="margin-bottom:10px">
                 <label>Payment reference</label>
-                <input id="quickTrackRef" placeholder="KP241218-AB4F2C" class="mono" autocomplete="off">
+                <input id="quickTrackRef" placeholder="KP260930-AB4F2C" class="mono" autocomplete="off">
               </div>
               <button class="btn btn-primary btn-block" data-action="quick-track">Check status</button>
             </div>
@@ -1818,7 +1786,6 @@ function viewLanding(){
             </p>
           </div>
 
-          <!-- Calculator -->
           <div class="self-body" data-body="calc">
             <div class="conv-field">
               <label>Amount</label>
@@ -1982,7 +1949,7 @@ function viewTrackPage(){
       <div class="card" style="margin-top:28px;padding:28px">
         <div class="field">
           <label>Payment reference ${hint('track')}</label>
-          <input id="pageTrackRef" class="mono" placeholder="KP241218-AB4F2C" autocomplete="off">
+          <input id="pageTrackRef" class="mono" placeholder="KP260930-AB4F2C" autocomplete="off">
           <span class="hint">Your reference is on every confirmation screen and receipt.</span>
         </div>
         <button class="btn btn-primary btn-block btn-lg" data-action="page-track">Check status →</button>
@@ -1996,7 +1963,7 @@ function viewTrackPage(){
         </div>
         <p style="font-size:13.5px;color:var(--body);line-height:1.6">
           It's on the confirmation screen right after you send, on every receipt you download,
-          and in the Transactions tab of your account. The reference looks like <span class="mono" style="font-weight:700">KP241218-AB4F2C</span>.
+          and in the Transactions tab of your account. The reference looks like <span class="mono" style="font-weight:700">KP260930-AB4F2C</span>.
         </p>
       </div>
     </div>
@@ -2004,7 +1971,7 @@ function viewTrackPage(){
 }
 
 /* ================================================================
-   PUBLIC: HELP CENTER
+   PUBLIC: HELP
    ================================================================ */
 function viewHelpPage(){
   return `
@@ -2249,8 +2216,6 @@ const Onboard = {
 
 function renderOnboarding(parts){
   const steps = ['Welcome','First recipient','Preferences','Done'];
-  const total = steps.length;
-
   $('#onboardProgress').innerHTML = steps.map((s,i) => {
     const cls = i === Onboard.step ? 'active' : i < Onboard.step ? 'done' : '';
     return `<div class="bar ${cls}"></div>`;
@@ -2841,7 +2806,6 @@ function viewTxnDetail(t){
    ================================================================ */
 function viewWallet(user){
   const currencies = ['USD','GBP','EUR','ZMW','ZAR','KES','NGN'];
-  const totalUSD = currencies.reduce((s,c)=> s + (user.wallet[c] || 0) / LIVE[c] * LIVE[c] / LIVE[c] * LIVE[c], 0);
   const totalUSDCalc = currencies.reduce((s,c)=> s + (user.wallet[c] || 0) / LIVE[c], 0);
 
   const rows = currencies.map(c => {
@@ -2993,7 +2957,7 @@ function viewAlerts(user){
 }
 
 /* ================================================================
-   LIMITS & TIER
+   LIMITS
    ================================================================ */
 function viewLimits(user){
   const tier = CONFIG.tiers[user.tier];
@@ -3303,7 +3267,7 @@ document.addEventListener('click', e => {
         box.innerHTML = `
           <div style="padding:20px;background:var(--red-50);border:1px solid #F8CDCF;border-radius:14px;color:#A8272C;font-size:13.5px;line-height:1.6">
             <b style="display:block;margin-bottom:4px">No payment found</b>
-            Check the reference — it should look like <span class="mono" style="font-weight:800">KP241218-AB4F2C</span>.
+            Check the reference — it should look like <span class="mono" style="font-weight:800">KP260930-AB4F2C</span>.
             References are case-insensitive.
           </div>`;
         break;
@@ -3345,11 +3309,11 @@ document.addEventListener('click', e => {
 
     case 'help-cat': {
       $$('.help-cat').forEach(c => c.classList.toggle('active', c === el));
+      currentHelpCat = value;
       renderHelpGrid(value, '');
       break;
     }
 
-    /* onboarding */
     case 'ob-purpose':
       Onboard.data.purpose = value;
       renderOnboarding([]);
@@ -3412,7 +3376,6 @@ document.addEventListener('click', e => {
       break;
     }
 
-    /* send flow */
     case 'send-recipient':
       Send.data.recipientId = id;
       Send.step = 1;
@@ -3651,7 +3614,6 @@ document.addEventListener('click', e => {
       break;
     }
 
-    /* alerts */
     case 'add-alert':
       openModal({
         title:'Set a rate alert', sub:'We watch the market so you do not have to.',
@@ -3700,7 +3662,6 @@ document.addEventListener('click', e => {
       Router.render();
       break;
 
-    /* limits */
     case 'upgrade-tier': {
       const tier = el.getAttribute('data-tier');
       openModal({
@@ -3733,7 +3694,6 @@ document.addEventListener('click', e => {
       break;
     }
 
-    /* wallet */
     case 'wallet-convert': {
       const user = Auth.current();
       const amount = parseFloat($('#walletConvertAmount').value) || 0;
@@ -3753,7 +3713,6 @@ document.addEventListener('click', e => {
       break;
     }
 
-    /* profile / security */
     case 'toggle-pref': {
       const user = Auth.current();
       const prefs = Object.assign({}, user.prefs || {});
@@ -3843,7 +3802,6 @@ document.addEventListener('click', e => {
   }
 });
 
-/* inputs */
 document.addEventListener('input', e => {
   const el = e.target.closest('[data-action]');
   if(el){
@@ -4030,7 +3988,6 @@ function filterAppHelp(query){
     </div>`;
 }
 
-/* rates grid builder */
 function buildRatesGrid(filter){
   const grid = $('#ratesGrid');
   if(!grid) return;
@@ -4135,7 +4092,6 @@ function tickRates(){
   window.addEventListener('hashchange', () => Router.render());
   Router.render();
 
-  /* attach converter listeners + initial render */
   setTimeout(() => {
     const fromSel = $('#convFrom'), toSel = $('#convTo');
     if(fromSel) fromSel.value = Converter.from;
@@ -4147,7 +4103,6 @@ function tickRates(){
     renderHelpGrid('all', '');
   }, 60);
 
-  /* Help page renders its own grid */
   const origRenderPublic = renderPublic;
   window.renderPublic = function(parts){
     origRenderPublic(parts);
@@ -4160,7 +4115,6 @@ function tickRates(){
     }
   };
 
-  /* re-apply renderPublic wrapper */
   Router.render = (function(orig){
     return function(){
       const {parts} = Router.parse();
